@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/*헤더*/
+#header{
+    height: 80px;
+    line-height:80px; /*행간조절,세로중앙정렬*/
+    border-bottom:1px solid #e5e5e5;/*일자선 만들기*/
+    margin-bottom: 30px;/*선기준으로 바깥으로 밀어내는 여백*/
+}
+
+#header h1{
+    float:left;
+}
+#header h1 a{}
+#header h1 img{
+}
+
+.gnb{
+    margin-left: 150px;
+    font-size:14px;
+    font-weight: bold; /*글씨체 굵게*/
+    float:left;
+}/*부모*/
+.gnb li{
+    margin-right: 30px;
+    float:left;
+}/*gnb의 모든li*/
+.gnb li a{}
+
+/*서브메뉴*/
+.lnb{
+    position:absolute;
+    z-index: 1;
+    line-height: 30px;/**/
+    font-size:12px;
+    font-weight: normal;
+    display:none;/*안보임처리*/
+}
+.lnb li:hover a{/*li에 호버 했을때 a에게 나타개는 효과*/
+    color:#007cc0;
+}
+
+/*호버*/
+.gnb li:hover .lnb{
+    display:block; /*gnb라는아이의 li에 마우스를 대엇을때 그 안에있는 lnb는 블락이 되어라*/
+}
+
+
+.langMenu{
+    font-size:12px;
+    float:right;
+}
+.langMenu li{
+    margin-left:10px; /*왼쪽에 10px씩 여백*/
+    float: left;
+}
+.langMenu li a{}
+.langMenu .on a{/*.on에주면 a태그 속성에 잡아먹히기 땜에 a까지 불어와야한다*/
+    color:#007cc0;
+    font-weight: bold;
+}
+
+/*푸터*/
+#footer{
+    border-top:1px solid #eee;
+    padding: 30px 0;
+}
+.fLogo{
+    float:left; /*로고옆에 f메뉴가 올라오게 띄우고 세로값 안잡히니 부모(inner)에게 cf*/
+    line-height: 54px; /*영억이 54px라서 로고를 세로가운데 정렬*/
+}
+.fLogo img{}
+
+
+.fInfo{
+    font-size:11px;/*부모의 텍스트 속성은 자식에게도 적용 되기때문에 여기에 적용*/
+    letter-spacing:-1px;
+    color:#ccc;
+    float: left;/*인포가 세로정렬되게 적용 p태극밑으로 내려온다*/
+    margin-left: 30px; /*finfo옆으로 마진*/
+}
+.fMenu{margin-bottom: 10px;}
+.fMenu li{
+    float: left; /*fmenu가 세로정렬 된후 부모(에프메뉴)에 cf적용*/
+}
+.fMenu li::after{/*글자사이에 선만드는거*/
+    content:"";
+    display:inline-block;/*a태그기때문에 인라인블락을 줘야 a태그가 떨어지지 않고 옆으로 붙고 박스속성가질수o*/
+    width: 1px;
+    height: 8px;
+    background-color: #ccc;
+    margin:0 5px;
+}
+.fMenu li::last child::after{
+    display: none;
+}
+
+.fMenu li a{
+    color:#ccc;
+}
+.fInfo p{}
+.waMark{
+    float:right;
+}
+.waMark a{}
+.waMark img{}

@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/*메인 슬라이더*/
+.mainSlider{
+    height: 600px;/*사진의 세로값만큼 부모에게 입력*/
+    overflow:hidden;/*넘치는거 안보임처리*/
+    position:relative;/*기준점*/
+}
+.mainSlider img{
+    position:absolute;
+    left:50%;/*중앙정렬*/
+    margin-left:-960px;/*내 박스의 반값*/
+
+}
+
+
+.mainSlider ul{
+    position:absolute;
+}
+.mainSlider ul li{float:left;}/*부모가 앱솔루트기 때문에 cf 불필요*/
+.mainSlider li a{
+    display:block;
+    height: 100%;
+}
+.mainSlider ul a{
+    text-indent: -9999px; /*글씨 빼버리기,백그라운드로 하면 알트값 넣을수 없기때문에*/
+    display:block; /*메인슬라이더의 모든li에 블락시킴*/
+}
+
+.sliderLBtn{
+    left:50%;
+    margin-left:-600px;
+    bottom:20px;
+}
+.sliderLBtn li{
+    
+    width:16px;/*동그라기 크기 맞추기*/
+    height:16px;
+    background:url(../images/main/blet_visual.png) no-repeat;
+    margin-right:5px;/*동그라미 사이여백*/
+
+}
+.sliderLBtn li:first-child{
+    background-position:0 -16px;
+}/*y값을 16픽셀만큼 댕겨서 흰색 이미지 보이게 하기*/
+.sliderLBtn li a{
+}
+
+.sliderRBtn{
+    right: 50%;
+    bottom:0;
+    margin-right: -600px;/*내박스만큼 빼면 이너기준 오른쪽에 딱 붙음*/
+}
+.sliderRBtn li{
+    width:45px;
+    height: 45px;
+    background:url(../images/main/btn_visual_cnt.png) no-repeat -46px 0;/*일시정지 이미지 불러왔음*/
+    margin-left: 1px;
+}
+.sliderRBtn li:first-child{background-position:0 0;}
+.sliderRBtn li:last-child{background-position:-92px 0;}/*사이여백 2px+45+45px씩*/
+.sliderRBtn li a{}
+
+
+/*메인컨텐츠01*/
+
+.mainCon01{
+    background:#1c97FE; /*전체배경*/
+    color:#fff;
+    padding:50px 0;
+}
+
+.con01List{}
+
+/*gridList=li들을 묶어 놓은것*/
+.gridList li{
+    float:left;/*ul에 cf를 줘야 배경이나타난다,li끝에 cf가 생겨야하기땜*/
+    width: 273px;/*이미지가로값*/
+    margin-right: 36px;/*여백 넓히기*/
+
+}
+.gridList li:last-child{margin-right: 0;}/*밀려내려간거 끌어올려주기,마지막 여백 없애기*/
+
+.con01List li h3{
+    font-size:20px;
+    font-weight:normal;
+}
+.con01List li a{}
+.con01List li img{
+    width: 100%;/*이미지 넘치는부분을 맞춰준다*/
+    margin:10px 0;
+}
+.con01List li p{
+    color:#fff;
+    font-size:11px;
+}
+
+/*메인컨텐츠02*/
+.mainCon02{
+    padding:50px;
+    text-align: center;/*인라인이기 때문에 전체부모에게 중앙정렬 시키면 자식들에게 상속된다,한번에 정리끝*/
+    background:url(../images/main/brandSite_bg.png) no-repeat center center;/*배경 중앙에 오게하기*/
+    background-size:cover;/*짧았던 배경을 채워넣어주는 아이*/
+}
+
+.con02List{margin-top:20px;}/*부제목이랑 여백 만들기*/
+.con02List li{}
+.con02List li img{
+    width:100%
+}
+.con02List li h4{
+    margin:20px 0;
+}
+.con02List li h4 span{font-size:12px;}
+
+.viewBtn{
+    width:130px;
+    background:#263D92;
+    margin:0 auto;/*뷰버튼 중앙정렬*/
+    height: 40px;/*버튼배경 늘리기*/
+    line-height: 40px;/*세로중앙정렬,상속*/
+    border-radius: 20px;/*둥글게 만들기,50%하면 동그라미로 된다*/
+}
+.viewBtn a{
+    display: block;/*라인헤이트 영향 때문에 헤이트100%주지 않아도 된다*/
+    color:#fff;
+}
+
+
+/*메인컨텐츠03*/
+.mainCon03{
+    padding:50px 0;
+}
+.mainCon03 h2{
+    text-align: center; /*중간정렬하면 이미지에 다 주는게 아니고 부모에게 줘야 정렬 가능*/
+    margin-bottom: 30px; /*h2밑 여백*/
+}
+.mainCon03 h2 img{}
+
+.con03List{}
+.con03List li{
+    width:376px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2); /*박스그림자 주기 , 설정하는법: x값y값 퍼지는정도 색상*/
+    /*박스투명도(0,0,0,=black색상 , 0.2=>투명도20%)*/
+}
+.con03List li img{
+    width:100%;
+    display:block;/*이미지의 여백있어서 블락으로 없애주기*/
+}
+
+.con03Info{
+    padding: 20px; /*안쪽으로 적용*/
+}
+.con03Info h3{}
+.con03Info p{
+    margin-bottom: 20px;
+    font-size:13px;
+}
+
+.con03Info .viewBtn{/*컨텐츠2에도 뷰버튼이있기 땜에 같이적어서같이적용*/
+    width:110px;/*가로값을 줄여주고*/
+    margin:0;/*마진0을 주면 왼쪽으로 붙는다*/
+    text-align: center;
+    background:#1c97fe;
+}
+.con03Info .viewBtn a{}
