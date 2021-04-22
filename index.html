@@ -3,9 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>삼성디스플레이</title>
+        <link rel="stylesheet" type="text/css" href="css/slick.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
         <link rel="stylesheet" type="text/css" href="css/default.css">
         <link rel="stylesheet" type="text/css" href="css/include.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/wow.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body>
        <!--전체-->
@@ -101,22 +108,17 @@
            <div id="container">
                <!--메인슬라이더-->
                <div class="mainSlider">
-                   <img src="images/main/img_visual_01.jpg" alt="메인이미지">
+                  <div class="mainImg">
+                       <div><img src="images/main/img_visual_01.jpg" alt="메인이미지"></div>
+                       <div><img src="images/main/img_visual_02.jpg" alt="메인이미지"></div>
+                   </div>
                    
-                   <!--왼쪽동그라미버튼-->
-                   <ul class="sliderLBtn">
-                       <li><a href="#">버튼1</a></li>
-                       <li><a href="#">버튼2</a></li>
-                       <li><a href="#">버튼3</a></li>
-                       <li><a href="#">버튼4</a></li>
-                   </ul>
-                   <!--왼쪽동그라미버튼-->
                    
                    <!--오른쪽네모버튼-->
                    <ul class="sliderRBtn">
-                       <li><a href="#">왼쪽</a></li>
-                       <li><a href="#">정지</a></li>
-                       <li><a href="#">오른쪽</a></li>
+                       <li class="prev"><a href="#">왼쪽</a></li>
+                       <li class="pauseBtn"><a href="#">정지</a></li>
+                       <li class="next"><a href="#">오른쪽</a></li>
                    </ul>
                    <!--오른쪽네모버튼-->
                </div>
@@ -238,7 +240,7 @@
                    <!--브랜드리스트-->
                    <ul class="con03List gridList cf">
                       <!--oled디스플레이-->
-                      <li><img src="images/main/brandImg01.jpg" alt="삼성OLED이미지">
+                      <li class="wow bounceInUp" data-wow-delay="0.3s"><img src="images/main/brandImg01.jpg" alt="삼성OLED이미지">
                           <!--CON03info-->
                             <div class="con03Info">    
                           <!--CON03info-->
@@ -249,7 +251,7 @@
                       <!--oled디스플레이--></li>
                       
                       <!--삼성커브디스플레이-->
-                      <li><img src="images/main/brandImg02.jpg" alt="삼성커브드이미지">
+                      <li class="wow bounceInUp" data-wow-delay="0.4s"><img src="images/main/brandImg02.jpg" alt="삼성커브드이미지">
                             <div class="con03Info">
                                 <h3>삼성 커브드 디스플레이</h3><p>Corved4life.com</p>
                                 <p>Accurate colors and contrast ratio of SAMSUNG Curved Technology</p>
@@ -259,7 +261,7 @@
                       <!--삼성커브디스플레이-->
                       
                       <!--삼성디스플레이pid-->
-                      <li><img src="images/main/brandImg03.jpg" alt="삼성pid이미지">
+                      <li class="wow bounceInUp" data-wow-delay="0.5s"><img src="images/main/brandImg03.jpg" alt="삼성pid이미지">
                             <div class="con03Info">
                                 <h3>삼성디스플레이 PID</h3><p>pidsamsungdisplay.com</p>
                                 <p>Best Solution Provider with Trusted PID Products in Your Business</p>

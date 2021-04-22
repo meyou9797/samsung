@@ -2,11 +2,14 @@
 
 /*메인 슬라이더*/
 .mainSlider{
+    position:relative;
+}
+.mainImg .slick-slide{
     height: 600px;/*사진의 세로값만큼 부모에게 입력*/
     overflow:hidden;/*넘치는거 안보임처리*/
     position:relative;/*기준점*/
 }
-.mainSlider img{
+.mainImg .slick-slide img{
     position:absolute;
     left:50%;/*중앙정렬*/
     margin-left:-960px;/*내 박스의 반값*/
@@ -27,20 +30,23 @@
     display:block; /*메인슬라이더의 모든li에 블락시킴*/
 }
 
-.sliderLBtn{
+.slider-dots{
     left:50%;
     margin-left:-600px;
     bottom:20px;
 }
-.sliderLBtn li{
-    
+.slider-dots li button{
     width:16px;/*동그라기 크기 맞추기*/
     height:16px;
     background:url(../images/main/blet_visual.png) no-repeat;
     margin-right:5px;/*동그라미 사이여백*/
-
+    display:block;
+    border: 0;
+    text-indent:-9999px;
+    outline: none;
+    cursor:pointer;
 }
-.sliderLBtn li:first-child{
+.slider-dots .slick-active button{
     background-position:0 -16px;
 }/*y값을 16픽셀만큼 댕겨서 흰색 이미지 보이게 하기*/
 .sliderLBtn li a{
@@ -61,6 +67,10 @@
 .sliderRBtn li:last-child{background-position:-92px 0;}/*사이여백 2px+45+45px씩*/
 .sliderRBtn li a{}
 
+
+.sliderRBtn .play{ /*클릭했을때 pause버튼 play버튼으로 바꾸게하려고*/
+    background-position:-138px 0;
+}
 
 /*메인컨텐츠01*/
 
@@ -130,6 +140,7 @@
 /*메인컨텐츠03*/
 .mainCon03{
     padding:50px 0;
+    overflow:hidden;
 }
 .mainCon03 h2{
     text-align: center; /*중간정렬하면 이미지에 다 주는게 아니고 부모에게 줘야 정렬 가능*/
